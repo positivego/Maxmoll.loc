@@ -1,0 +1,29 @@
+* {
+    margin: 0; padding: 0; z-index: 1; font-family: 'DINPro', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.w-5, .px-2 {
+    display: none;
+}
+
+//COLORS
+//elements colors
+$dashboard-body-color: #262a2d;
+$dashboard-scroll-color: #b4b4b4;
+$dashboard-menu-color: #383c3d;
+$dashboard-menu-title-active-color: #4e5455;
+
+//fonts color
+$dashboard-font-title-color: #b4b4b4;
+$dashboard-font-main-color: #b4b4b4;
+$dashboard-font-link-hover-color: #ff975c;
+
+
+//fonts sizes
+$font-size-small: 12px;
+$font-size-normal: 14px;
