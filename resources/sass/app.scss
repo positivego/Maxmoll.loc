@@ -64,6 +64,113 @@ body {
 -----------------------------*/
 
 .content {
-    position: relative; width: calc(100% - 200px);
-    margin-left: 200px;
+    position: relative; width: 1500px; left: 300px; top: 200px;
+
+    h2 {
+        position: relative; bottom: 10px; color: white;
+    }
+
+    .history {
+        position: relative; width: 100%;
+
+        a {
+           position: relative; color: $dashboard-font-main-color; text-decoration: none;
+           
+           &:hover {
+                text-decoration: underline;
+           }
+        }
+    }
+
+    table {
+        border-collapse: collapse; margin-top: 20px;
+        border-spacing: 0;
+        font-size: 11px;
+        color: white;
+
+        th {
+            position: relative;
+            border: 1px solid $dashboard-table-board-color;
+            max-width: 180px; min-width: 80px;
+            height: 35px; text-align: left; font-weight: 400;
+        }
+        
+        th p {
+            position: relative; margin: 0 10px; opacity: 0.5;
+        }
+        
+        td {
+            position: relative;
+            border: 1px solid $dashboard-table-board-color;
+            max-width: 200px; min-width: 80px;
+            height: 35px;
+        }
+        
+        td p {
+            position: relative;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0 10px;
+        }
+
+        td a {
+            position: relative; color: white; text-decoration: none; margin: 0 10px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        
+        .non-border-left {
+            border-left: none;
+        }
+        
+        .non-border-right {
+            border-right: none;
+        }
+        
+        tr .line {
+            position: absolute; width: 1500px; height: 1px; background-color: $dashboard-table-board-color;
+        }
+        
+        tr .line:first-child {
+            top: -1px;
+        }
+        
+        tr .line:last-child {
+            bottom: -1px;
+        }
+    }
+
+    form {
+        position: relative; display: flex; flex-direction: column;
+        width: 300px;
+
+        input {
+            position: relative; margin-bottom: 20px; padding: 5px;
+        }
+
+        select {
+            position: relative; margin-bottom: 20px; padding: 5px;
+        }
+
+        button {
+            position: relative; height: 30px;
+        }
+    }
+
+    .cards {
+        position: relative; width: 100%;
+        
+        a {
+            position: relative; color: white; text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .error__item {
+        position: relative; color: red; margin-bottom: 20px; font-weight: 700;
+    }
+
 }

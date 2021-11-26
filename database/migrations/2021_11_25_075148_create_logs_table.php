@@ -15,8 +15,10 @@ class CreateLogsTable extends Migration
     {
         Schema::create('logs', function (Blueprint $table) {
             $table->id();
-            $table->string('from', 255);
-            $table->string('to', 255);
+            /* $table->string('from', 255);
+            $table->string('to', 255); */
+            $table->foreignId('from_storage_id')->nullable()->constrained('storages')->onDelete('cascade');
+            $table->foreignId('to_storage_id')->nullable()->constrained('storages')->onDelete('cascade');
             $table->foreignId('log_type_id')->constrained('log_types')->onDelete('cascade');
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
             $table->integer('stock');

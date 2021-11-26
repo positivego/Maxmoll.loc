@@ -11,6 +11,12 @@ class Storage extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
+    protected $fillable = [
+        'name',
+    ];
+
     public function items(): HasMany
     {
         return $this->hasMany(StorageItem::class);

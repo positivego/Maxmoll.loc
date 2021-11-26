@@ -80,6 +80,124 @@ body {
 -----------------------------*/
 .content {
   position: relative;
-  width: calc(100% - 200px);
-  margin-left: 200px;
+  width: 1500px;
+  left: 300px;
+  top: 200px;
+}
+.content h2 {
+  position: relative;
+  bottom: 10px;
+  color: white;
+}
+.content .history {
+  position: relative;
+  width: 100%;
+}
+.content .history a {
+  position: relative;
+  color: #b4b4b4;
+  text-decoration: none;
+}
+.content .history a:hover {
+  text-decoration: underline;
+}
+.content table {
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-spacing: 0;
+  font-size: 11px;
+  color: white;
+}
+.content table th {
+  position: relative;
+  border: 1px solid #666666;
+  max-width: 180px;
+  min-width: 80px;
+  height: 35px;
+  text-align: left;
+  font-weight: 400;
+}
+.content table th p {
+  position: relative;
+  margin: 0 10px;
+  opacity: 0.5;
+}
+.content table td {
+  position: relative;
+  border: 1px solid #666666;
+  max-width: 200px;
+  min-width: 80px;
+  height: 35px;
+}
+.content table td p {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 10px;
+}
+.content table td a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.content table td a:hover {
+  text-decoration: underline;
+}
+.content table .non-border-left {
+  border-left: none;
+}
+.content table .non-border-right {
+  border-right: none;
+}
+.content table tr .line {
+  position: absolute;
+  width: 1500px;
+  height: 1px;
+  background-color: #666666;
+}
+.content table tr .line:first-child {
+  top: -1px;
+}
+.content table tr .line:last-child {
+  bottom: -1px;
+}
+.content form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.content form input {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.content form select {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.content form button {
+  position: relative;
+  height: 30px;
+}
+.content .cards {
+  position: relative;
+  width: 100%;
+}
+.content .cards a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+.content .cards a:hover {
+  text-decoration: underline;
+}
+.content .error__item {
+  position: relative;
+  color: red;
+  margin-bottom: 20px;
+  font-weight: 700;
 }

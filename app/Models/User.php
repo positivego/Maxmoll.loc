@@ -10,11 +10,12 @@ class User extends Model
 {
     use HasFactory;
 
-    /**
-     * Get all of the comments for the User
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
+    public $timestamps = false;
+
+    protected $fillable = [
+        'name',
+    ];
+
     public function orders(): HasMany
     {
         return $this->hasMany(Order::class);
