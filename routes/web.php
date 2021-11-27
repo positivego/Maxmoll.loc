@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LogController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StorageController;
 use App\Http\Controllers\UserController;
@@ -18,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Можно было бы использовать ресурс-контроллеры, но мне больше нравится обычные роуты, мне кажется что они более гибкие
+
 Route::get('/', [IndexController::class, 'index'])->name('index');
 
 // ЛОГИ
@@ -32,6 +35,15 @@ Route::get('/storages/{storage}/move/{product}', [StorageController::class, 'mov
 Route::post('/storages/{storage}/move/{product}', [StorageController::class, 'move'])->name('storages.storage.move');
 Route::get('/storages/{storage}/history', [StorageController::class, 'history'])->name('storages.storage.history');
 Route::get('/storages/{storage}/history/{product}', [StorageController::class, 'productHistory'])->name('storages.storage.product.history');
+
+// ЗАКАЗЫ
+Route::get('/orders', [OrderController::class, 'index'])->name('orders');
+Route::get('/orders/create', [OrderController::class, 'create'])->name('orders.create');
+Route::post('/orders', [OrderController::class, 'store'])->name('orders.store');
+Route::get('/orders/{order}/edit', [OrderController::class, 'edit'])->name('orders.edit');
+Route::put('/orders/{order}', [OrderController::class, 'update'])->name('orders.update');
+Route::post('/orders/gethistory', [OrderController::class, 'getHistory'])->name('orders.get.history');
+Route::get('/orders/history', [OrderController::class, 'history'])->name('orders.history');
 
 Route::prefix('tools')->group(function () {
 

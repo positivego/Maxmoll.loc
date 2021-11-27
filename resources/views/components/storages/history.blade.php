@@ -22,7 +22,7 @@
 
                 @foreach ($logs as $log)
                     <tr>
-                        <td class="non-border-left"><div class="line"></div><p>@if ($log->from === null) @else {{$log->from->name}} @endif</p></td>
+                        <td class="non-border-left"><div class="line"></div><p>@if ($log->from === null) @else {{$log->from->name}} @endif</p><div class="line"></div></td>
                         <td class=""><p>@if ($log->to === null) @else {{$log->to->name}} @endif</p></td>
                         <td class=""><p>{{$log->type->name}}</p></td>
                         <td class=""><p>{{$log->product->name}}</p></td>

@@ -1,3 +1,12 @@
+## О том как запустить
+
+1. После клонирования, создать файл env из env.example и указать url приложения
+2. создать тестовую бд с кодировкой utf8_general_ci и настроить подключение в env
+3. Установить все зависимости "composer install"
+4. Сгенерировать ключ проекта "php artisan key:generate"
+5. Запустить миграции "php artisan migrate"
+6. Залить бд из дампа который находится в папке database (maxmoll.sql) использовал mysql 5.7
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">

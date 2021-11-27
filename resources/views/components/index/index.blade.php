@@ -2,6 +2,8 @@
 
 @section('content')
     
-    <div class="content">Content</div>
+    <div class="content">
+        <h2>Основная страница</h2>
+    </div>
 
 @endsection

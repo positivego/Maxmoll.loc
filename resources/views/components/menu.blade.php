@@ -8,8 +8,8 @@
             <a href="{{route('index')}}">Основная</a>
         </div>
 
-        <div class="group__item {{Request::is('/dashboard') ? 'active' : '' }}">
-            <a href="{{route('index')}}">Заказы</a>
+        <div class="group__item {{Request::is('orders*') ? 'active' : '' }}">
+            <a href="{{route('orders')}}">Заказы</a>
         </div>
 
         <div class="group__item {{Request::is('storages*') ? 'active' : '' }}">

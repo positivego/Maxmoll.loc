@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class StorageToOrderItem extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
+
+    protected $fillable = [
+        'order_id',
+        'storage_id',
+    ];
 }
